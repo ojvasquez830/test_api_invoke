@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Master</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="parentContainer">
+        <div class="searchContainer">
+            <h1>Cocktails finder</h1>
+            <h2>Search a Cocktail</h2>
+            <input type="text" id="cocktailName" name="cocktailName"> </br>
+            <h2>Or search by ingridients</h2>
+            <input type="text" id="ingredient1" name="ingredient1">
+            <input type="text" id="ingredient2" name="ingredient2">
+            <input type="text" id="ingredient3" name="ingredient3">
+            <div class="buttonsDiv">
+                <button onclick="setCocktail(
+                    document.getElementById('cocktailName').value,
+                    document.getElementById('ingredient1').value,
+                    document.getElementById('ingredient2').value,
+                    document.getElementById('ingredient3').value,
+                    this)">Seacrch</button>
+                <button onclick="setRandomCocktail(this)">Random cocktail</button>
+            </div>
+            <script src="index.js"></script>
+        </div>
+        <div id="cocktailContainer" class="cocktailContainer">
+            <h1 id="cocktailTitle"> </h1>
+            <p id="cocktailDesc"> </p>
+            <ul id="ingredients"></ul>
+        </div>
+    </div>
+
+</body>
+</html>
